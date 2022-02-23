@@ -138,7 +138,7 @@ function App() {
       <button onClick={handleWalk}>Walk</button>
       <div style={{ height: "100vh", width: "100%" }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyDzv5raBfmoe_GoyBw3155y0p_Wwd4ljSs" }}
+          bootstrapURLKeys={{ key: "" }}
           defaultCenter={center}
           defaultZoom={15}
         >
