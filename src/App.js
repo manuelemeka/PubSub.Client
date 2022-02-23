@@ -3,6 +3,7 @@ import GoogleMapReact from "google-map-react";
 import React, { useEffect, useState } from "react";
 import { FaCar, FaUser } from "react-icons/fa";
 import "./App.css";
+import DriverUpdate from "./driver";
 
 const Car = ({ text }) => (
   <div>
@@ -29,8 +30,8 @@ function App() {
 
   useEffect(() => {
     const newConnection = new HubConnectionBuilder()
-      //.withUrl("https://localhost:44339/hubs/stream")
-      .withUrl("https://fastaride-pubsub.herokuapp.com/hubs/stream")
+      .withUrl("https://localhost:44339/hubs/stream")
+      //.withUrl("https://fastaride-pubsub.herokuapp.com/hubs/stream")
       .withAutomaticReconnect()
       .build();
 
@@ -107,6 +108,7 @@ function App() {
   return (
     <div className="App">
       <h1>PubSub.Client</h1>
+      <DriverUpdate />
       {/* <table>
         <tbody>
           {data &&
